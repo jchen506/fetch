@@ -20,7 +20,7 @@ class Crawler:
     counter = 0
 
     while self.url_pool and counter < self.limit:
-      source_url = self.url_pool.pop()
+      source_url = self.url_pool.pop(0)
       self.visited_url.add(source_url)
       try:
         self.parse_web_page(source_url)
